@@ -7,10 +7,10 @@ ENV SPARK_HOME /opt/spark-$SPARK_VERSION
 ENV PATH $SPARK_HOME/bin:$PATH
 
 RUN	mkdir -p $SPARK_HOME && \
-    wget -O spark http://www-eu.apache.org/dist/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz && \
+    	wget -O spark http://www-eu.apache.org/dist/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz && \
 	tar -xzf spark -C $SPARK_HOME
 
-RUN wget -O Miniconda.sh https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
+RUN 	wget -O Miniconda.sh https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
 	./Miniconda.sh -b && \
 	rm Miniconda.sh && \
 	python3 -m pip install jupyter && \
