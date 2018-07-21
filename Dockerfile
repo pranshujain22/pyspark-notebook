@@ -10,6 +10,10 @@ RUN	mkdir -p $SPARK_HOME && \
     	wget -O spark http://www-eu.apache.org/dist/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz && \
 	tar -xzf spark -C $SPARK_HOME
 
+ENV PATH /root/miniconda3/bin:$PATH
+ENV PYSPARK_DRIVER_PYTHON jupyter
+ENV PYSPARK_DRIVER_PYTHON_OPTS 'notebook'
+
 RUN 	wget -O Miniconda.sh https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
 	chmod a+x Miniconda.sh && \
 	./Miniconda.sh -b && \
@@ -20,10 +24,6 @@ RUN 	wget -O Miniconda.sh https://repo.continuum.io/miniconda/Miniconda3-latest-
 
 # ADD spark/ $SPARK_HOME/
 # ADD Miniconda.sh .
-
-ENV PATH /root/miniconda3/bin:$PATH
-ENV PYSPARK_DRIVER_PYTHON jupyter
-ENV PYSPARK_DRIVER_PYTHON_OPTS 'notebook'
 
 # RUN	chmod a+x Miniconda.sh && \
 # 	./Miniconda.sh -b && \
