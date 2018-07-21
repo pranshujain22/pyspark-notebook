@@ -11,6 +11,7 @@ RUN	mkdir -p $SPARK_HOME && \
 	tar -xzf spark -C $SPARK_HOME
 
 RUN 	wget -O Miniconda.sh https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
+	chmod a+x Miniconda.sh && \
 	./Miniconda.sh -b && \
 	rm Miniconda.sh && \
 	python3 -m pip install jupyter && \
