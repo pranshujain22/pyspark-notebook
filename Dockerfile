@@ -1,5 +1,4 @@
 FROM openjdk:8
-
 MAINTAINER pranshujain
 
 ENV SPARK_VERSION 2.3.1
