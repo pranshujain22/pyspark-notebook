@@ -54,7 +54,6 @@ $ kubectl run pyspark-demo --image=pranshujain/pyspark-notebook:<version> --port
 
 $ kubectl get deployments
 
-$ kubectl get pods
 ```
 
 From your development machine, you can expose the Pod to the public internet using the kubectl expose command:
@@ -74,6 +73,8 @@ Here you can code and run Pyspark programs.
 
 To access pod logs:
 ```shell
+$ kubectl get pods
+
 $ kubectl logs <POD-NAME>
 ```
 
