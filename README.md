@@ -4,4 +4,4 @@ For this we have built docker container using Pyspark and integrated it with Jup
 
 ## For Local Use
 
-1. [Install Docker](../Docker/Installation.md) on local system.
+1. [Install Docker](https://github.com/pranshujain22/Hadoop/blob/master/Docker/Installation.md) on local system.
