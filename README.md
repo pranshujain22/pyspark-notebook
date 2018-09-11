@@ -81,12 +81,12 @@ $ kubectl logs <POD-NAME>
 
 Now you can clean up the resources you created in your cluster:
 ```bash
-$ kubectl delete service hello-node
-$ kubectl delete deployment hello-node
+$ kubectl delete service pyspark-demo
+$ kubectl delete deployment pyspark-demo
 ```
 Optionally, force removal of the Docker images created:
 ```bash
-$ docker rmi hello-node:v1 hello-node:v2 -f
+$ docker rmi pranshujain/pyspark-notebook:<version> -f
 ```
 Optionally, stop the Minikube VM:
 ```bash
