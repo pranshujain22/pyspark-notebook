@@ -26,7 +26,7 @@ $ docker inspect <container-name>
 ```
 
 Start the web browser and enter IPAddress in the following pattern,
-> <IPAddress>:8888
+> \<IPAddress\>:8888
 
 as the 8888 port is assigned and expossed to run Jupyter-Notebook.
 
@@ -68,7 +68,7 @@ $ kubectl get services
 
 $ minikube service pyspark-demo
 ```
-this will open Jupyter-Notebook in the default web browser.
+This will open Jupyter-Notebook in the default web browser.
 
 Here you can code and run Pyspark programs.
 
