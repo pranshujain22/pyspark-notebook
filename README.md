@@ -27,6 +27,7 @@ $ docker inspect <container-name>
 
 Start the web browser and enter IPAddress in the following pattern,
 > \<IPAddress\>:8888
+
 as the 8888 port is assigned and expossed to run Jupyter-Notebook.
 
 ## For Kubernetes
