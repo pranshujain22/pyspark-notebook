@@ -2,7 +2,7 @@ FROM openjdk:8
 MAINTAINER pranshujain
 
 ENV SPARK_VERSION 2.3.1
-ENV SPARK_HOME /opt/spark-$SPARK_VERSION
+ENV SPARK_HOME /opt/spark-$SPARK_VERSION/spark-2.3.1-bin-hadoop2.7
 ENV PATH $SPARK_HOME/bin:$PATH
 
 RUN	mkdir -p $SPARK_HOME && \
@@ -14,7 +14,7 @@ ENV PYSPARK_DRIVER_PYTHON jupyter
 ENV PYSPARK_DRIVER_PYTHON_OPTS 'notebook'
 
 RUN 	wget -O Miniconda.sh https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-	chmod +x Miniconda.sh && \
+	chmod a+x Miniconda.sh && \
 	./Miniconda.sh -b && \
 	rm Miniconda.sh && \
 	python3 -m pip install jupyter && \
