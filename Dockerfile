@@ -7,7 +7,7 @@ ENV PATH $SPARK_HOME/bin:$PATH
 
 RUN	mkdir -p /opt/spark-$SPARK_VERSION && \
     	wget -O spark http://www-eu.apache.org/dist/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz && \
-	tar -xzf spark -C $SPARK_HOME --strip-components 1
+	tar -xzf spark -C $SPARK_HOME
 
 ENV PATH /root/miniconda3/bin:$PATH
 ENV PYSPARK_DRIVER_PYTHON jupyter
