@@ -14,7 +14,7 @@ ENV PYSPARK_DRIVER_PYTHON jupyter
 ENV PYSPARK_DRIVER_PYTHON_OPTS 'notebook'
 
 RUN 	wget -O Miniconda.sh https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-	chmod a+x Miniconda.sh && \
+	chmod +x Miniconda.sh && \
 	./Miniconda.sh -b && \
 	rm Miniconda.sh && \
 	python3 -m pip install jupyter && \
