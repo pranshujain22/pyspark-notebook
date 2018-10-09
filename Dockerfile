@@ -5,7 +5,7 @@ ENV SPARK_VERSION 2.3.1
 ENV SPARK_HOME /opt/spark-$SPARK_VERSION/spark-2.3.1-bin-hadoop2.7
 ENV PATH $SPARK_HOME/bin:$PATH
 
-RUN	mkdir -p $SPARK_HOME && \
+RUN	mkdir -p /opt/spark-$SPARK_VERSION && \
     	wget -O spark http://www-eu.apache.org/dist/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz && \
 	tar -xzf spark -C $SPARK_HOME --strip-components 1
 
