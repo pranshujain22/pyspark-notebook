@@ -1,12 +1,12 @@
 FROM openjdk:8
 MAINTAINER pranshujain
 
-ENV SPARK_VERSION 2.3.1
-ENV SPARK_HOME /opt/spark-$SPARK_VERSION/spark-2.3.1-bin-hadoop2.7
+ENV SPARK_VERSION 3.3.1
+ENV SPARK_HOME /opt/spark-$SPARK_VERSION/spark-3.3.1-bin-hadoop3
 ENV PATH $SPARK_HOME/bin:$PATH
 
 RUN	mkdir -p /opt/spark-$SPARK_VERSION && \
-    	wget -O spark http://www-eu.apache.org/dist/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz && \
+    	wget -O spark https://downloads.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz && \
 	tar -xzf spark -C $SPARK_HOME
 
 ENV PATH /root/miniconda3/bin:$PATH
